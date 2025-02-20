@@ -368,6 +368,7 @@ const transformUsage = (data) => ({
 });
 
 const processCompletionsResponse = (data, model, id) => {
+	console.log("Data received by processCompletionsResponse:", data);  
   return JSON.stringify({
     id,
     choices: data.candidates.map(transformCandidatesMessage),
